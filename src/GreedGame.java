@@ -330,6 +330,6 @@ public class GreedGame {
 	public static void main(String[] args){
 		System.out.println("Your score was "
 		+(new GreedGame(true)).evaluatePlayer(new 
-				HumanGreedPlayer(),1));
+				ComputerGreedStrategyPlayer(new BrownJacksonKocogluSiddiquiGreedStrategy()),1));
 	}
 }
