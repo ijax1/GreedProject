@@ -328,8 +328,11 @@ public class GreedGame {
 	}
 	
 	public static void main(String[] args){
-		System.out.println("Your score was "
-		+(new GreedGame(true)).evaluatePlayer(new 
-				ComputerGreedStrategyPlayer(new BrownJacksonKocogluSiddiquiGreedStrategy()),1));
+		int score = 0;
+		for (int i = 0; i < 10000; i++) {
+			score += new GreedGame(false).evaluatePlayer(new ComputerGreedStrategyPlayer(new BrownJacksonKocogluSiddiquiGreedStrategy()),1);
+		}
+		score /= 10000;
+		System.out.println(score);
 	}
 }
