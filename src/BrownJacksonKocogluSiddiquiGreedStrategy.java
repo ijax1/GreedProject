@@ -11,13 +11,13 @@ public class BrownJacksonKocogluSiddiquiGreedStrategy extends GreedStrategy {
 		for (int i = 1; i < options.length; i++) {
 			if (options[i].optionType() == GreedOption.SCORE) {
 				if (((ScoringCombination) options[i]).getValue() != 50) {
-					return 1;
+					return GreedOption.ROLLAGAIN;
 				}
 			}
 		}
 		if (dice.length <= 3) {
-			return 2;
+			return GreedOption.SCORE;
 		}
-		return 1;
+		return GreedOption.ENDTURN;
 	}
 }
