@@ -7,22 +7,9 @@ public class BrownJacksonKocogluSiddiquiGreedStrategy extends GreedStrategy {
 		return "Brown, Jackson, Kocoglu, Siddiqui";
 	}
 	
-	//gets about 361 pts
 	public int choose(GreedOption[] options, int[] dice, int bank) {
+		//gets about 361 points
 		/*
-		for (int i = 1; i < options.length; i++) {
-			if (options[i].optionType() == GreedOption.SCORE) {
-				if (((ScoringCombination) options[i]).getValue() != 50) {
-					return 1; //bank scoring combination
-				}
-			}
-		}
-		if (dice.length <= 3) {
-			return 2; //end turn
-		}
-		
-		return 0; //end turn
-		*/
 		for (int i = 0; i < options.length; i++) {
 			if (options[i].optionType() == GreedOption.SCORE) {
 				if (((ScoringCombination) options[i]).getValue() != 50 || dice.length <= 3) {
@@ -34,5 +21,16 @@ public class BrownJacksonKocogluSiddiquiGreedStrategy extends GreedStrategy {
 			return 1; //end turn
 		}
 		return 0; //roll again
+		*/
+		//gets about 383 points
+		if (options[0].optionType() == GreedOption.SCORE) {
+			if (((ScoringCombination) options[0]).getValue() > 100 || dice.length <= 3) {
+				return 0; //bank scoring combination
+			}
+		}
+		if (dice.length <= 2) {
+			return 1;
+		}
+		return options.length - 2;
 	}
 }
