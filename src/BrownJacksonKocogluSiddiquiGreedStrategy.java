@@ -7,6 +7,7 @@ public class BrownJacksonKocogluSiddiquiGreedStrategy extends GreedStrategy {
 		return "Brown, Jackson, Kocoglu, Siddiqui";
 	}
 	
+	//gets about 361 pts
 	public int choose(GreedOption[] options, int[] dice, int bank) {
 		/*
 		for (int i = 1; i < options.length; i++) {
