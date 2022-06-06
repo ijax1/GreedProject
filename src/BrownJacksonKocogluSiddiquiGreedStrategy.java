@@ -22,13 +22,13 @@ public class BrownJacksonKocogluSiddiquiGreedStrategy extends GreedStrategy {
 		}
 		return 0; //roll again
 		*/
-		//gets about 383 points
+		//gets about 400 points
 		if (options[0].optionType() == GreedOption.SCORE) {
 			if (((ScoringCombination) options[0]).getValue() > 50 || dice.length <= 3) {
 				return 0; //bank scoring combination
 			}
 		}
-		if (dice.length <= 2) {
+		if (dice.length <= 2 && dice.length != 0) {
 			return 1;
 		}
 		return options.length - 2;
