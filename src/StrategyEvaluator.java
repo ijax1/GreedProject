@@ -10,8 +10,9 @@ public class StrategyEvaluator {
 	}
 	
 	public static double practiceGreed(){
-		return (new GreedGame(true))
-				.evaluatePlayer(new HumanGreedPlayer(), 1);
+		return (new GreedGame(false))
+				.evaluatePlayer(new ComputerGreedStrategyPlayer(
+						new BrownJacksonKocogluSiddiquiGreedStrategy()),100000);
 	}
 	
 	public static void main(String[] args) {
