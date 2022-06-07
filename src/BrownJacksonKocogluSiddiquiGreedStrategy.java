@@ -29,7 +29,7 @@ public class BrownJacksonKocogluSiddiquiGreedStrategy extends GreedStrategy {
 			}
 		}
 		if (dice.length <= 2 && dice.length != 0) {
-			return 1;
+			return options.length - 1;
 		}
 		return options.length - 2;
 	}
