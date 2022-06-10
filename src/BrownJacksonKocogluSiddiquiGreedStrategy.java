@@ -1,6 +1,6 @@
 public class BrownJacksonKocogluSiddiquiGreedStrategy extends GreedStrategy {
 	public String playerName() {
-		return "Ian, Connor, Jasir, Aybars' Strat";
+		return "Brown, Jackson, Kocoglu, Siddiqui's Strategy";
 	}
 	
 	public String author() {
